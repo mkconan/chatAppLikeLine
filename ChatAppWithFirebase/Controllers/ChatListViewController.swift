@@ -20,6 +20,10 @@ class ChatListViewController: UIViewController {
         chatListTableView.delegate = self
         chatListTableView.dataSource = self
         
+        navigationController?.navigationBar.barTintColor = .rgb(red: 29, green: 49, blue: 69)
+        navigationItem.title = "Talk"
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        
     }
     
 }
