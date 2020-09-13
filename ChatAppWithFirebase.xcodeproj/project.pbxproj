@@ -15,6 +15,8 @@
 		13CEAAC8250E565200E996DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13CEAAC6250E565200E996DD /* LaunchScreen.storyboard */; };
 		13CEAAD3250E565200E996DD /* ChatAppWithFirebaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEAAD2250E565200E996DD /* ChatAppWithFirebaseTests.swift */; };
 		13CEAADE250E565200E996DD /* ChatAppWithFirebaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEAADD250E565200E996DD /* ChatAppWithFirebaseUITests.swift */; };
+		13CEAAEC250E56B900E996DD /* ChatList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13CEAAEB250E56B900E996DD /* ChatList.storyboard */; };
+		13CEAAEE250E586C00E996DD /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEAAED250E586C00E996DD /* ChatListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		13CEAAD9250E565200E996DD /* ChatAppWithFirebaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatAppWithFirebaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CEAADD250E565200E996DD /* ChatAppWithFirebaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppWithFirebaseUITests.swift; sourceTree = "<group>"; };
 		13CEAADF250E565200E996DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13CEAAEB250E56B900E996DD /* ChatList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatList.storyboard; sourceTree = "<group>"; };
+		13CEAAED250E586C00E996DD /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 			children = (
 				13CEAABB250E565100E996DD /* AppDelegate.swift */,
 				13CEAABD250E565100E996DD /* SceneDelegate.swift */,
+				13CEAAED250E586C00E996DD /* ChatListViewController.swift */,
+				13CEAAEB250E56B900E996DD /* ChatList.storyboard */,
 				13CEAABF250E565100E996DD /* ViewController.swift */,
 				13CEAAC1250E565100E996DD /* Main.storyboard */,
 				13CEAAC4250E565200E996DD /* Assets.xcassets */,
@@ -234,6 +240,7 @@
 			files = (
 				13CEAAC8250E565200E996DD /* LaunchScreen.storyboard in Resources */,
 				13CEAAC5250E565200E996DD /* Assets.xcassets in Resources */,
+				13CEAAEC250E56B900E996DD /* ChatList.storyboard in Resources */,
 				13CEAAC3250E565100E996DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +268,7 @@
 			files = (
 				13CEAAC0250E565100E996DD /* ViewController.swift in Sources */,
 				13CEAABC250E565100E996DD /* AppDelegate.swift in Sources */,
+				13CEAAEE250E586C00E996DD /* ChatListViewController.swift in Sources */,
 				13CEAABE250E565100E996DD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
