@@ -52,9 +52,10 @@
             <connections>
                 <outlet property="dateLabel" destination="mxd-tN-b5v" id="8Fo-pK-2N6"/>
                 <outlet property="messageTextView" destination="UTk-gs-rr4" id="Amn-2u-EZo"/>
+                <outlet property="messageTextViewWidthConstraint" destination="Vv4-aU-Exj" id="7xB-Rl-IVt"/>
                 <outlet property="userImageView" destination="6ly-wW-NoG" id="due-dH-CQB"/>
             </connections>
-            <point key="canvasLocation" x="102.89855072463769" y="22.433035714285712"/>
+            <point key="canvasLocation" x="-581" y="-48"/>
         </tableViewCell>
     </objects>
     <resources>
