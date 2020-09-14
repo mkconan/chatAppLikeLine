@@ -20,6 +20,8 @@
 		13CEAAF8250E842E00E996DD /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEAAF7250E842E00E996DD /* ChatRoomViewController.swift */; };
 		13CEAAFA250EF62C00E996DD /* ChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13CEAAF9250EF62C00E996DD /* ChatRoomTableViewCell.xib */; };
 		13CEAAFC250EF80400E996DD /* ChatRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEAAFB250EF80400E996DD /* ChatRoomTableViewCell.swift */; };
+		13CEAB02250F255A00E996DD /* ChatInputAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13CEAB01250F255A00E996DD /* ChatInputAccessoryView.xib */; };
+		13CEAB04250F28D600E996DD /* ChatInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEAB03250F28D600E996DD /* ChatInputAccessoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		13CEAAF7250E842E00E996DD /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
 		13CEAAF9250EF62C00E996DD /* ChatRoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomTableViewCell.xib; sourceTree = "<group>"; };
 		13CEAAFB250EF80400E996DD /* ChatRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewCell.swift; sourceTree = "<group>"; };
+		13CEAB01250F255A00E996DD /* ChatInputAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatInputAccessoryView.xib; sourceTree = "<group>"; };
+		13CEAB03250F28D600E996DD /* ChatInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputAccessoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +113,12 @@
 		13CEAABA250E565100E996DD /* ChatAppWithFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				13CEAB00250F24FE00E996DD /* Extensions */,
+				13CEAAFF250F249C00E996DD /* Views */,
+				13CEAAFE250F245200E996DD /* Xibs */,
 				13CEAAF0250E7F3200E996DD /* StoryBoards */,
 				13CEAAEF250E7EF900E996DD /* Controllers */,
 				13CEAABB250E565100E996DD /* AppDelegate.swift */,
-				13CEAAF9250EF62C00E996DD /* ChatRoomTableViewCell.xib */,
-				13CEAAFB250EF80400E996DD /* ChatRoomTableViewCell.swift */,
-				13CEAAF1250E7FE500E996DD /* UIColor-Extension.swift */,
 				13CEAABD250E565100E996DD /* SceneDelegate.swift */,
 				13CEAAC4250E565200E996DD /* Assets.xcassets */,
 				13CEAAC6250E565200E996DD /* LaunchScreen.storyboard */,
@@ -157,6 +161,32 @@
 				13CEAAF5250E838E00E996DD /* ChatRoom.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		13CEAAFE250F245200E996DD /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				13CEAAF9250EF62C00E996DD /* ChatRoomTableViewCell.xib */,
+				13CEAB01250F255A00E996DD /* ChatInputAccessoryView.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		13CEAAFF250F249C00E996DD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				13CEAAFB250EF80400E996DD /* ChatRoomTableViewCell.swift */,
+				13CEAB03250F28D600E996DD /* ChatInputAccessoryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		13CEAB00250F24FE00E996DD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				13CEAAF1250E7FE500E996DD /* UIColor-Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +297,7 @@
 				13CEAAC8250E565200E996DD /* LaunchScreen.storyboard in Resources */,
 				13CEAAC5250E565200E996DD /* Assets.xcassets in Resources */,
 				13CEAAEC250E56B900E996DD /* ChatList.storyboard in Resources */,
+				13CEAB02250F255A00E996DD /* ChatInputAccessoryView.xib in Resources */,
 				13CEAAF6250E838E00E996DD /* ChatRoom.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13CEAABC250E565100E996DD /* AppDelegate.swift in Sources */,
+				13CEAB04250F28D600E996DD /* ChatInputAccessoryView.swift in Sources */,
 				13CEAAF2250E7FE500E996DD /* UIColor-Extension.swift in Sources */,
 				13CEAAF8250E842E00E996DD /* ChatRoomViewController.swift in Sources */,
 				13CEAAEE250E586C00E996DD /* ChatListViewController.swift in Sources */,
