@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" rowHeight="173" id="UGs-b6-tEz" customClass="ChatRoomTableViewCell" customModule="ChatAppWithFirebase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="538" height="173"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UGs-b6-tEz" id="Bk8-jH-y5h">
+                <rect key="frame" x="0.0" y="0.0" width="538" height="173"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kirby" translatesAutoresizingMaskIntoConstraints="NO" id="6ly-wW-NoG">
+                        <rect key="frame" x="35" y="56.5" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="6ly-wW-NoG" secondAttribute="height" multiplier="1:1" id="gCd-eM-CpO"/>
+                            <constraint firstAttribute="width" constant="60" id="vDg-Jo-jXH"/>
+                        </constraints>
+                    </imageView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="メッセージがここにはいります" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTk-gs-rr4">
+                        <rect key="frame" x="105" y="25" width="250" height="123"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="250" id="Vv4-aU-Exj"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxd-tN-b5v">
+                        <rect key="frame" x="360" y="117" width="43" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="UTk-gs-rr4" secondAttribute="bottom" constant="25" id="BKP-vA-aca"/>
+                    <constraint firstItem="mxd-tN-b5v" firstAttribute="leading" secondItem="UTk-gs-rr4" secondAttribute="trailing" constant="5" id="N89-qA-BUD"/>
+                    <constraint firstItem="UTk-gs-rr4" firstAttribute="top" secondItem="Bk8-jH-y5h" secondAttribute="top" constant="25" id="RyZ-f3-84U"/>
+                    <constraint firstItem="6ly-wW-NoG" firstAttribute="leading" secondItem="Bk8-jH-y5h" secondAttribute="leadingMargin" constant="15" id="WUZ-kI-63L"/>
+                    <constraint firstItem="6ly-wW-NoG" firstAttribute="centerY" secondItem="Bk8-jH-y5h" secondAttribute="centerY" id="aEd-5c-wdU"/>
+                    <constraint firstItem="UTk-gs-rr4" firstAttribute="bottom" secondItem="mxd-tN-b5v" secondAttribute="bottom" constant="10" id="cNy-Nq-wgj"/>
+                    <constraint firstItem="UTk-gs-rr4" firstAttribute="leading" secondItem="6ly-wW-NoG" secondAttribute="trailing" constant="10" id="h2x-ty-7yB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="mxd-tN-b5v" id="8Fo-pK-2N6"/>
+                <outlet property="messageTextView" destination="UTk-gs-rr4" id="Amn-2u-EZo"/>
+                <outlet property="userImageView" destination="6ly-wW-NoG" id="due-dH-CQB"/>
+            </connections>
+            <point key="canvasLocation" x="102.89855072463769" y="22.433035714285712"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="kirby" width="112.5" height="112.5"/>
+    </resources>
+</document>
