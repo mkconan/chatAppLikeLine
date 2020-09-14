@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,8 @@
 		13CEAB02250F255A00E996DD /* ChatInputAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13CEAB01250F255A00E996DD /* ChatInputAccessoryView.xib */; };
 		13CEAB04250F28D600E996DD /* ChatInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEAB03250F28D600E996DD /* ChatInputAccessoryView.swift */; };
 		13CEAB06250F9FB800E996DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13CEAB05250F9FB800E996DD /* GoogleService-Info.plist */; };
+		13CEAB08250FA53800E996DD /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13CEAB07250FA53800E996DD /* SignUp.storyboard */; };
+		13CEAB0A250FA96A00E996DD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEAB09250FA96A00E996DD /* SignUpViewController.swift */; };
 		55AB54CB4356EDD5D7ABA586 /* Pods_ChatAppWithFirebaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B69A8EF3F7D89E7454150423 /* Pods_ChatAppWithFirebaseTests.framework */; };
 		750121D04E6EE07A98ED6288 /* Pods_ChatAppWithFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE1E460FD3996B94792AAEDC /* Pods_ChatAppWithFirebase.framework */; };
 		D2A172771007419BA4B9A24D /* Pods_ChatAppWithFirebase_ChatAppWithFirebaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F2CFA359BBB667C41EF1B97 /* Pods_ChatAppWithFirebase_ChatAppWithFirebaseUITests.framework */; };
@@ -69,6 +71,8 @@
 		13CEAB01250F255A00E996DD /* ChatInputAccessoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatInputAccessoryView.xib; sourceTree = "<group>"; };
 		13CEAB03250F28D600E996DD /* ChatInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputAccessoryView.swift; sourceTree = "<group>"; };
 		13CEAB05250F9FB800E996DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		13CEAB07250FA53800E996DD /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		13CEAB09250FA96A00E996DD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1F681B1EECF3319EF3768CD7 /* Pods-ChatAppWithFirebaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatAppWithFirebaseTests.release.xcconfig"; path = "Target Support Files/Pods-ChatAppWithFirebaseTests/Pods-ChatAppWithFirebaseTests.release.xcconfig"; sourceTree = "<group>"; };
 		5F2CFA359BBB667C41EF1B97 /* Pods_ChatAppWithFirebase_ChatAppWithFirebaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatAppWithFirebase_ChatAppWithFirebaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F817B0B461C7C1F174AD9F6 /* Pods-ChatAppWithFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatAppWithFirebase.debug.xcconfig"; path = "Target Support Files/Pods-ChatAppWithFirebase/Pods-ChatAppWithFirebase.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 			children = (
 				13CEAAED250E586C00E996DD /* ChatListViewController.swift */,
 				13CEAAF7250E842E00E996DD /* ChatRoomViewController.swift */,
+				13CEAB09250FA96A00E996DD /* SignUpViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 			children = (
 				13CEAAEB250E56B900E996DD /* ChatList.storyboard */,
 				13CEAAF5250E838E00E996DD /* ChatRoom.storyboard */,
+				13CEAB07250FA53800E996DD /* SignUp.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -219,7 +225,6 @@
 				DED1E01336021C7CA9510936 /* Pods-ChatAppWithFirebaseTests.debug.xcconfig */,
 				1F681B1EECF3319EF3768CD7 /* Pods-ChatAppWithFirebaseTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -348,6 +353,7 @@
 				13CEAAEC250E56B900E996DD /* ChatList.storyboard in Resources */,
 				13CEAB02250F255A00E996DD /* ChatInputAccessoryView.xib in Resources */,
 				13CEAAF6250E838E00E996DD /* ChatRoom.storyboard in Resources */,
+				13CEAB08250FA53800E996DD /* SignUp.storyboard in Resources */,
 				13CEAB06250F9FB800E996DD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +484,7 @@
 			files = (
 				13CEAABC250E565100E996DD /* AppDelegate.swift in Sources */,
 				13CEAB04250F28D600E996DD /* ChatInputAccessoryView.swift in Sources */,
+				13CEAB0A250FA96A00E996DD /* SignUpViewController.swift in Sources */,
 				13CEAAF2250E7FE500E996DD /* UIColor-Extension.swift in Sources */,
 				13CEAAF8250E842E00E996DD /* ChatRoomViewController.swift in Sources */,
 				13CEAAEE250E586C00E996DD /* ChatListViewController.swift in Sources */,
