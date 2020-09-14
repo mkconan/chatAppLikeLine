@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>84110244490-558e19vkklbng9oom23qdjn1g8i03n74.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.84110244490-558e19vkklbng9oom23qdjn1g8i03n74</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBc2XOnlVipdDr9xX2lzsRhUYFi2Z8KpjM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>84110244490</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Kotaro.ChatAppWithFirebase</string>
+	<key>PROJECT_ID</key>
+	<string>chatwithfirebaseapp-34783</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chatwithfirebaseapp-34783.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:84110244490:ios:3a23d21b8d08b5d1ec4b73</string>
+	<key>DATABASE_URL</key>
+	<string>https://chatwithfirebaseapp-34783.firebaseio.com</string>
+</dict>
+</plist>
