@@ -24,6 +24,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="プロフィール画像"/>
+                                <connections>
+                                    <action selector="tappedProfileImageButton:" destination="LG9-kw-ci4" eventType="touchUpInside" id="ims-ho-5C8"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="YkM-KM-ioq">
                                 <rect key="frame" x="57" y="274" width="300" height="250"/>
@@ -96,6 +99,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tappedRegisterButton:" destination="LG9-kw-ci4" eventType="touchUpInside" id="Og4-ol-pS5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWk-oL-k0Q">
                                 <rect key="frame" x="120.5" y="644" width="173" height="28"/>
