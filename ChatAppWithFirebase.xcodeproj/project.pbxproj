@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1349A4A6251109B800C9CDA9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1349A4A5251109B800C9CDA9 /* User.swift */; };
 		13CEAABC250E565100E996DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEAABB250E565100E996DD /* AppDelegate.swift */; };
 		13CEAABE250E565100E996DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEAABD250E565100E996DD /* SceneDelegate.swift */; };
 		13CEAAC5250E565200E996DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CEAAC4250E565200E996DD /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		0037723510116074F07102A0 /* Pods-ChatAppWithFirebase-ChatAppWithFirebaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatAppWithFirebase-ChatAppWithFirebaseUITests.release.xcconfig"; path = "Target Support Files/Pods-ChatAppWithFirebase-ChatAppWithFirebaseUITests/Pods-ChatAppWithFirebase-ChatAppWithFirebaseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1349A4A5251109B800C9CDA9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		13CEAAB8250E565100E996DD /* ChatAppWithFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatAppWithFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CEAABB250E565100E996DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13CEAABD250E565100E996DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1349A4A42511099900C9CDA9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1349A4A5251109B800C9CDA9 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		13CEAAAF250E565100E996DD = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 		13CEAABA250E565100E996DD /* ChatAppWithFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				1349A4A42511099900C9CDA9 /* Models */,
 				13CEAB00250F24FE00E996DD /* Extensions */,
 				13CEAAFF250F249C00E996DD /* Views */,
 				13CEAAFE250F245200E996DD /* Xibs */,
@@ -487,6 +498,7 @@
 				13CEAB0A250FA96A00E996DD /* SignUpViewController.swift in Sources */,
 				13CEAAF2250E7FE500E996DD /* UIColor-Extension.swift in Sources */,
 				13CEAAF8250E842E00E996DD /* ChatRoomViewController.swift in Sources */,
+				1349A4A6251109B800C9CDA9 /* User.swift in Sources */,
 				13CEAAEE250E586C00E996DD /* ChatListViewController.swift in Sources */,
 				13CEAAFC250EF80400E996DD /* ChatRoomTableViewCell.swift in Sources */,
 				13CEAABE250E565100E996DD /* SceneDelegate.swift in Sources */,
