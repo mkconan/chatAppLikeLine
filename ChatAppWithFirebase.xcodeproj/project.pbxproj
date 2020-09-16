@@ -11,6 +11,7 @@
 		135B75F92511FA1F00D9E836 /* UserList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 135B75F82511FA1F00D9E836 /* UserList.storyboard */; };
 		135B75FB2511FEF000D9E836 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B75FA2511FEF000D9E836 /* UserListViewController.swift */; };
 		135B75FD25124EB400D9E836 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B75FC25124EB400D9E836 /* ChatRoom.swift */; };
+		135B75FF2512745400D9E836 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B75FE2512745400D9E836 /* Message.swift */; };
 		13CEAABC250E565100E996DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEAABB250E565100E996DD /* AppDelegate.swift */; };
 		13CEAABE250E565100E996DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEAABD250E565100E996DD /* SceneDelegate.swift */; };
 		13CEAAC5250E565200E996DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CEAAC4250E565200E996DD /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		135B75F82511FA1F00D9E836 /* UserList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserList.storyboard; sourceTree = "<group>"; };
 		135B75FA2511FEF000D9E836 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		135B75FC25124EB400D9E836 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
+		135B75FE2512745400D9E836 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		13CEAAB8250E565100E996DD /* ChatAppWithFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatAppWithFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CEAABB250E565100E996DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13CEAABD250E565100E996DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				1349A4A5251109B800C9CDA9 /* User.swift */,
 				135B75FC25124EB400D9E836 /* ChatRoom.swift */,
+				135B75FE2512745400D9E836 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				1349A4A6251109B800C9CDA9 /* User.swift in Sources */,
 				13CEAAEE250E586C00E996DD /* ChatListViewController.swift in Sources */,
 				13CEAAFC250EF80400E996DD /* ChatRoomTableViewCell.swift in Sources */,
+				135B75FF2512745400D9E836 /* Message.swift in Sources */,
 				13CEAABE250E565100E996DD /* SceneDelegate.swift in Sources */,
 				135B75FD25124EB400D9E836 /* ChatRoom.swift in Sources */,
 			);
