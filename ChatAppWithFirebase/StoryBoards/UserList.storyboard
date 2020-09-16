@@ -26,7 +26,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0HZ-qZ-7V2">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0HZ-qZ-7V2">
                                                     <rect key="frame" x="10" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="qnW-W7-AQd"/>
@@ -64,8 +64,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eSw-fl-kEz"/>
                     </view>
-                    <navigationItem key="navigationItem" id="M6O-7C-qRP"/>
+                    <navigationItem key="navigationItem" id="M6O-7C-qRP">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="eik-x6-pgE">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2o4-fP-qhE">
+                                <rect key="frame" x="302" y="7" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.35199826670000001" green="0.75793882720000005" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Start Chat">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="startChatButton" destination="2o4-fP-qhE" id="kZF-yH-ZUL"/>
                         <outlet property="userListTableView" destination="gD8-EG-Y06" id="bX5-lo-7L8"/>
                     </connections>
                 </viewController>

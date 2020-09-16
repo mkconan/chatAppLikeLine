@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseAuth
 import Nuke
 
 class UserListViewController: UIViewController {
@@ -16,13 +17,16 @@ class UserListViewController: UIViewController {
     private var users = [User]()
     
     @IBOutlet weak var userListTableView: UITableView!
+    @IBOutlet weak var startChatButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         userListTableView.delegate = self
         userListTableView.dataSource = self
+        startChatButton.layer.cornerRadius = 15
         
+        navigationController?.navigationBar.barTintColor = .rgb(red: 39, green: 49, blue: 69)
         fetchUserInfoFromFirestore()
     }
     
@@ -38,6 +42,12 @@ class UserListViewController: UIViewController {
             snapshots?.documents.forEach({ (snapshot) in
                 let dic = snapshot.data()
                 let user = User.init(dic: dic)
+                
+                guard let uid = Auth.auth().currentUser?.uid else {return}
+                
+                if uid == snapshot.documentID {
+                    return 
+                }
                 
                 self.users.append(user)
                 self.userListTableView.reloadData()
@@ -85,6 +95,9 @@ class UserListTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        userImageView.layer.cornerRadius = 25
+        
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
