@@ -28,8 +28,31 @@ class ChatListViewController: UIViewController {
         setupViews()
         confirmLoggedInUser()
         fetchLoginUserInfo()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        fetchChatroomsInfoFromFirestore()
         
     }
+    
+    private func fetchChatroomsInfoFromFirestore() {
+        Firestore.firestore().collection("chatRooms").getDocuments { (snapshot, err) in
+            if let err = err {
+                print("チャットルーム情報の取得に失敗しました \(err)")
+                return
+            }
+            
+            snapshot?.documents.forEach({ (snapshot) in
+                let dic = snapshot.data()
+                
+                print("dic: ", dic)
+            })
+            
+        }
+    }
+    
     
     private func setupViews() {
         chatListTableView.delegate = self
@@ -59,6 +82,7 @@ class ChatListViewController: UIViewController {
         let storyboard = UIStoryboard.init(name: "UserList", bundle: nil)
         let userListViewController = storyboard.instantiateViewController(withIdentifier: "UserListViewController")
         let nav = UINavigationController(rootViewController: userListViewController)
+        nav.modalPresentationStyle = .fullScreen
         self.present(nav, animated: true, completion: nil)
         
     }
