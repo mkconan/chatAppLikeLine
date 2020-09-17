@@ -10,7 +10,7 @@
         <!--Quizanswer View Controller-->
         <scene sceneID="k7n-V4-mXD">
             <objects>
-                <viewController storyboardIdentifier="QuizanswerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6IX-kT-HgZ" customClass="QuizanswerViewController" customModule="ChatAppWithFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizanswerViewController" id="6IX-kT-HgZ" customClass="QuizanswerViewController" customModule="SummerHackason" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dsX-gZ-WYT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,6 +29,9 @@
                                         <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="qsentence:" destination="VGU-fb-ZYy" eventType="editingDidEnd" id="l3m-5W-qJY"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -54,7 +57,10 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpx-wm-SmN">
                                                         <rect key="frame" x="21.5" y="0.0" width="278.5" height="55"/>
                                                         <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <state key="normal" title="やなせ"/>
+                                                        <state key="normal" title="aaa"/>
+                                                        <connections>
+                                                            <action selector="choice_a:" destination="VGU-fb-ZYy" eventType="touchUpInside" id="Nfd-DL-Iba"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -75,7 +81,10 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUs-Zg-hkN">
                                                         <rect key="frame" x="21" y="0.0" width="279" height="55"/>
                                                         <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <state key="normal" title="すぎえ"/>
+                                                        <state key="normal" title="bbb"/>
+                                                        <connections>
+                                                            <action selector="choice_b:" destination="VGU-fb-ZYy" eventType="touchUpInside" id="Pvp-U6-jLs"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -96,7 +105,10 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCV-dr-nR0">
                                                         <rect key="frame" x="22" y="0.0" width="278" height="55"/>
                                                         <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <state key="normal" title="かわむら"/>
+                                                        <state key="normal" title="ccc"/>
+                                                        <connections>
+                                                            <action selector="choice_c:" destination="VGU-fb-ZYy" eventType="touchUpInside" id="We6-ht-2jJ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -117,7 +129,10 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOo-F0-NDD">
                                                         <rect key="frame" x="22" y="0.0" width="278" height="55"/>
                                                         <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <state key="normal" title="ありが"/>
+                                                        <state key="normal" title="ddd"/>
+                                                        <connections>
+                                                            <action selector="choice_d:" destination="VGU-fb-ZYy" eventType="touchUpInside" id="Nd3-RV-6VZ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -139,8 +154,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IKt-76-Hhc"/>
                     </view>
+                    <connections>
+                        <outlet property="choice_a" destination="Qpx-wm-SmN" id="e0b-yL-bkU"/>
+                        <outlet property="choice_b" destination="xUs-Zg-hkN" id="Jma-qj-gdC"/>
+                        <outlet property="choice_c" destination="hCV-dr-nR0" id="8e1-D3-jRq"/>
+                        <outlet property="choice_d" destination="NOo-F0-NDD" id="jhV-1R-y9K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CS2-ar-HRn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="VGU-fb-ZYy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="165" y="76"/>
         </scene>
