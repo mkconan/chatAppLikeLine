@@ -11,7 +11,7 @@
         <scene sceneID="k7n-V4-mXD">
             <objects>
                 <viewController storyboardIdentifier="QuizanswerViewController" id="6IX-kT-HgZ" customClass="QuizanswerViewController" customModule="SummerHackason" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dsX-gZ-WYT">
+                    <view key="view" contentMode="scaleToFill" id="dsX-gZ-WYT" customClass="QuizanswerViewCell" customModule="SummerHackason" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -153,6 +153,13 @@
                             <constraint firstItem="tuL-fl-lUZ" firstAttribute="centerX" secondItem="dsX-gZ-WYT" secondAttribute="centerX" id="jTs-9l-jGs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IKt-76-Hhc"/>
+                        <connections>
+                            <outlet property="choice_a" destination="Qpx-wm-SmN" id="PAH-wj-uqD"/>
+                            <outlet property="choice_b" destination="xUs-Zg-hkN" id="1PS-ic-Xs4"/>
+                            <outlet property="choice_c" destination="hCV-dr-nR0" id="gFC-Zb-stV"/>
+                            <outlet property="choice_d" destination="NOo-F0-NDD" id="HMq-ML-Fi6"/>
+                            <outlet property="qsentence" destination="Ljr-zR-z8g" id="Azw-yT-O2Q"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="choice_a" destination="Qpx-wm-SmN" id="e0b-yL-bkU"/>

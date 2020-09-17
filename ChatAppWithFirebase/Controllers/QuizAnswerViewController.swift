@@ -27,7 +27,8 @@ class QuizanswerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchQuizFromFirestore() 
+        fetchQuizFromFirestore()
+        
         
     }
     
@@ -53,27 +54,35 @@ class QuizanswerViewController: UIViewController {
     }
 }
 
-class QuizanswerViewCell: UITableViewCell{
+class QuizanswerViewCell: UIView{
     
     var qdata: Quizdata?{
         didSet{
+            if let qdata = qdata{
+                choice_a.titleLabel?.text = qdata.cA
+                choice_b.titleLabel?.text = qdata.cB
+                choice_c.titleLabel?.text = qdata.cC
+                choice_d.titleLabel?.text = qdata.cD
+                qsentence.text = qdata.qsent
 
+            }
         }
     }
     
-    @IBAction func qsentence(_ sender: Any) {
     
-    }
-    @IBAction func choice_a(_ sender: UIButton) {
-        sender.setTitle(qdata?.cA, for: .normal)
-    }
+    @IBOutlet weak var qsentence: UITextField!
+    @IBOutlet weak var choice_a: UIButton!
+    @IBOutlet weak var choice_b: UIButton!
+    @IBOutlet weak var choice_c: UIButton!
+    @IBOutlet weak var choice_d: UIButton!
     
-    @IBAction func choice_b(_ sender: Any) {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
     }
-    
-    @IBAction func choice_c(_ sender: Any) {
+    /*
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
     }
-    @IBAction func choice_d(_ sender: Any) {
-    }
-    
+    */
 }
