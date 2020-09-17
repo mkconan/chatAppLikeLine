@@ -13,18 +13,21 @@ class QuizMenuViewController:UIViewController {
     @IBAction func tappedAnswerButton(_ sender: Any) {
         let storyboard = UIStoryboard.init(name: "Quizanswer", bundle: nil)
         let quizAnswerViewController = storyboard.instantiateViewController(identifier: "QuizanswerViewController")
-        self.present(quizAnswerViewController, animated: true, completion: nil)
+        //self.present(quizAnswerViewController, animated: true, completion: nil)
+        navigationController?.pushViewController(quizAnswerViewController, animated: true)
     }
     
     @IBAction func tappedQuestionButton(_ sender: Any) {
         let storyboard = UIStoryboard.init(name: "QuizRegister", bundle: nil)
         let quizRegisterViewController = storyboard.instantiateViewController(identifier: "QuizRegisterViewController")
-        self.present(quizRegisterViewController, animated: true, completion: nil)
+        //self.present(quizRegisterViewController, animated: true, completion: nil)
+        navigationController?.pushViewController(quizRegisterViewController, animated: true)
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "クイズ"
         
         
     }

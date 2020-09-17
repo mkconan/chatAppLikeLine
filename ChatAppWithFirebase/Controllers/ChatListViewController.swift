@@ -28,12 +28,9 @@ class ChatListViewController: UIViewController {
     @IBAction func tappedQuizMenuButton(_ sender: Any) {
         let storyboard = UIStoryboard.init(name: "QuizMenu", bundle: nil)
         let quizMenuViewController = storyboard.instantiateViewController(withIdentifier: "QuizMenuViewController")
-        self.present(quizMenuViewController, animated: true, completion: nil)
+        //self.present(quizMenuViewController, animated: true, completion: nil)
+        navigationController?.pushViewController(quizMenuViewController, animated: true)
         
-//        let storyboard = UIStoryboard.init(name: "UserList", bundle: nil)
-//        let userListViewController = storyboard.instantiateViewController(withIdentifier: "UserListViewController")
-//        let nav = UINavigationController(rootViewController: userListViewController)
-//        self.present(nav, animated: true, completion: nil)
     }
     
     
