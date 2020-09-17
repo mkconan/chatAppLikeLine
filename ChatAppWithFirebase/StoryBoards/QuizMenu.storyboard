@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="xbm-WZ-J2e">
+            <objects>
+                <navigationController id="lL3-HV-HmK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8ep-sJ-8Ue">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="au1-ti-VE6" kind="relationship" relationship="rootViewController" id="DF9-W4-iQH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16N-az-BTF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-972" y="-64"/>
+        </scene>
+        <!--Quiz Menu View Controller-->
+        <scene sceneID="Ia2-T5-mc6">
+            <objects>
+                <viewController storyboardIdentifier="QuizMenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="au1-ti-VE6" customClass="QuizMenuViewController" customModule="ChatAppWithFirebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9aC-A8-DaI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWj-nQ-akl">
+                                <rect key="frame" x="77" y="246" width="260" height="120"/>
+                                <color key="backgroundColor" red="0.0" green="0.72549019609999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="a4G-9S-JCX"/>
+                                    <constraint firstAttribute="height" constant="120" id="sE6-YD-oUz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="解答">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedAnswerButton:" destination="au1-ti-VE6" eventType="touchUpInside" id="PgI-DW-pwJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPr-Yq-cos">
+                                <rect key="frame" x="77" y="531" width="260" height="120"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="QrU-Jd-qen"/>
+                                    <constraint firstAttribute="height" constant="120" id="vId-lo-kmH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="出題">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedQuestionButton:" destination="au1-ti-VE6" eventType="touchUpInside" id="bgQ-wL-T96"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VPr-Yq-cos" firstAttribute="centerX" secondItem="9aC-A8-DaI" secondAttribute="centerX" id="AZj-oh-uI6"/>
+                            <constraint firstItem="VPr-Yq-cos" firstAttribute="top" secondItem="SWj-nQ-akl" secondAttribute="bottom" constant="165" id="Rhw-Hh-faz"/>
+                            <constraint firstItem="SWj-nQ-akl" firstAttribute="centerX" secondItem="9aC-A8-DaI" secondAttribute="centerX" id="tiG-3K-v98"/>
+                            <constraint firstItem="SWj-nQ-akl" firstAttribute="top" secondItem="V4b-re-CFV" secondAttribute="top" constant="158" id="yMG-bU-3bp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V4b-re-CFV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JCR-m7-WgM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KtI-Yu-uuu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-184.05797101449278" y="-63.616071428571423"/>
+        </scene>
+    </scenes>
+</document>

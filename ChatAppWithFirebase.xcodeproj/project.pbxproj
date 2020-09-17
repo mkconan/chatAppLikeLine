@@ -12,6 +12,12 @@
 		135B75FB2511FEF000D9E836 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B75FA2511FEF000D9E836 /* UserListViewController.swift */; };
 		135B75FD25124EB400D9E836 /* ChatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B75FC25124EB400D9E836 /* ChatRoom.swift */; };
 		135B75FF2512745400D9E836 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B75FE2512745400D9E836 /* Message.swift */; };
+		135B76032512958600D9E836 /* Quizanswer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 135B76022512958600D9E836 /* Quizanswer.storyboard */; };
+		135B76052512959300D9E836 /* QuizanswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B76042512959300D9E836 /* QuizanswerViewController.swift */; };
+		135B7607251295A000D9E836 /* QuizRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 135B7606251295A000D9E836 /* QuizRegister.storyboard */; };
+		135B7609251295AA00D9E836 /* QuizRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B7608251295AA00D9E836 /* QuizRegisterViewController.swift */; };
+		135B760B2512A36700D9E836 /* QuizMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 135B760A2512A36700D9E836 /* QuizMenu.storyboard */; };
+		135B760D2512A4C100D9E836 /* QuizMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135B760C2512A4C100D9E836 /* QuizMenuViewController.swift */; };
 		13CEAABC250E565100E996DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEAABB250E565100E996DD /* AppDelegate.swift */; };
 		13CEAABE250E565100E996DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CEAABD250E565100E996DD /* SceneDelegate.swift */; };
 		13CEAAC5250E565200E996DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CEAAC4250E565200E996DD /* Assets.xcassets */; };
@@ -59,6 +65,12 @@
 		135B75FA2511FEF000D9E836 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		135B75FC25124EB400D9E836 /* ChatRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoom.swift; sourceTree = "<group>"; };
 		135B75FE2512745400D9E836 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		135B76022512958600D9E836 /* Quizanswer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Quizanswer.storyboard; sourceTree = "<group>"; };
+		135B76042512959300D9E836 /* QuizanswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizanswerViewController.swift; sourceTree = "<group>"; };
+		135B7606251295A000D9E836 /* QuizRegister.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QuizRegister.storyboard; sourceTree = "<group>"; };
+		135B7608251295AA00D9E836 /* QuizRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizRegisterViewController.swift; sourceTree = "<group>"; };
+		135B760A2512A36700D9E836 /* QuizMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QuizMenu.storyboard; sourceTree = "<group>"; };
+		135B760C2512A4C100D9E836 /* QuizMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizMenuViewController.swift; sourceTree = "<group>"; };
 		13CEAAB8250E565100E996DD /* ChatAppWithFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatAppWithFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CEAABB250E565100E996DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13CEAABD250E565100E996DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +209,9 @@
 				13CEAAF7250E842E00E996DD /* ChatRoomViewController.swift */,
 				13CEAB09250FA96A00E996DD /* SignUpViewController.swift */,
 				135B75FA2511FEF000D9E836 /* UserListViewController.swift */,
+				135B76042512959300D9E836 /* QuizanswerViewController.swift */,
+				135B7608251295AA00D9E836 /* QuizRegisterViewController.swift */,
+				135B760C2512A4C100D9E836 /* QuizMenuViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -208,6 +223,9 @@
 				13CEAAF5250E838E00E996DD /* ChatRoom.storyboard */,
 				13CEAB07250FA53800E996DD /* SignUp.storyboard */,
 				135B75F82511FA1F00D9E836 /* UserList.storyboard */,
+				135B76022512958600D9E836 /* Quizanswer.storyboard */,
+				135B7606251295A000D9E836 /* QuizRegister.storyboard */,
+				135B760A2512A36700D9E836 /* QuizMenu.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -374,7 +392,10 @@
 				13CEAAFA250EF62C00E996DD /* ChatRoomTableViewCell.xib in Resources */,
 				13CEAAC8250E565200E996DD /* LaunchScreen.storyboard in Resources */,
 				13CEAAC5250E565200E996DD /* Assets.xcassets in Resources */,
+				135B760B2512A36700D9E836 /* QuizMenu.storyboard in Resources */,
+				135B7607251295A000D9E836 /* QuizRegister.storyboard in Resources */,
 				13CEAAEC250E56B900E996DD /* ChatList.storyboard in Resources */,
+				135B76032512958600D9E836 /* Quizanswer.storyboard in Resources */,
 				13CEAB02250F255A00E996DD /* ChatInputAccessoryView.xib in Resources */,
 				13CEAAF6250E838E00E996DD /* ChatRoom.storyboard in Resources */,
 				13CEAB08250FA53800E996DD /* SignUp.storyboard in Resources */,
@@ -507,17 +528,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				13CEAABC250E565100E996DD /* AppDelegate.swift in Sources */,
+				135B76052512959300D9E836 /* QuizanswerViewController.swift in Sources */,
 				13CEAB04250F28D600E996DD /* ChatInputAccessoryView.swift in Sources */,
 				13CEAB0A250FA96A00E996DD /* SignUpViewController.swift in Sources */,
 				13CEAAF2250E7FE500E996DD /* UIColor-Extension.swift in Sources */,
 				13CEAAF8250E842E00E996DD /* ChatRoomViewController.swift in Sources */,
 				135B75FB2511FEF000D9E836 /* UserListViewController.swift in Sources */,
 				1349A4A6251109B800C9CDA9 /* User.swift in Sources */,
+				135B7609251295AA00D9E836 /* QuizRegisterViewController.swift in Sources */,
 				13CEAAEE250E586C00E996DD /* ChatListViewController.swift in Sources */,
 				13CEAAFC250EF80400E996DD /* ChatRoomTableViewCell.swift in Sources */,
 				135B75FF2512745400D9E836 /* Message.swift in Sources */,
 				13CEAABE250E565100E996DD /* SceneDelegate.swift in Sources */,
 				135B75FD25124EB400D9E836 /* ChatRoom.swift in Sources */,
+				135B760D2512A4C100D9E836 /* QuizMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

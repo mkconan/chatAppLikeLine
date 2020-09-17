@@ -25,6 +25,17 @@ class ChatListViewController: UIViewController {
     }
     
     @IBOutlet weak var chatListTableView: UITableView!
+    @IBAction func tappedQuizMenuButton(_ sender: Any) {
+        let storyboard = UIStoryboard.init(name: "QuizMenu", bundle: nil)
+        let quizMenuViewController = storyboard.instantiateViewController(withIdentifier: "QuizMenuViewController")
+        self.present(quizMenuViewController, animated: true, completion: nil)
+        
+//        let storyboard = UIStoryboard.init(name: "UserList", bundle: nil)
+//        let userListViewController = storyboard.instantiateViewController(withIdentifier: "UserListViewController")
+//        let nav = UINavigationController(rootViewController: userListViewController)
+//        self.present(nav, animated: true, completion: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -175,20 +186,6 @@ extension ChatListViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 class ChatListTableViewCell: UITableViewCell{
-    
-//    var user: User? {
-//        didSet{
-//            if let user = user {
-//                partnerLabel.text = user.username
-//
-//                //userImageView.image = user?.profileImageUrl
-//                dateLabel.text = dateFormatterForDateLabel(date: user.createdAt.dateValue())
-//                latestMessageLabel.text = user.email
-//
-//            }
-//
-//        }
-//    }
 
     
     var chatroom: ChatRoom? {
@@ -211,6 +208,10 @@ class ChatListTableViewCell: UITableViewCell{
     @IBOutlet weak var partnerLabel: UILabel!
     @IBOutlet weak var latestMessageLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+ 
+    
+        
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
