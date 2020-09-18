@@ -26,7 +26,7 @@ class  QuizRegisterViewController: UIViewController{
         super.viewDidLoad()
         
         
-        RegisterButton.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
+        RegisterButton.addTarget(self, action: #selector(tappedQuizRegisterButton), for: .touchUpInside)
         
         Qsentences.delegate = self
         Choice_A.delegate = self
@@ -40,7 +40,7 @@ class  QuizRegisterViewController: UIViewController{
         RegisterButton.backgroundColor = .rgb(red: 100, green: 100, blue: 100)
     }
     
-    @objc private func tappedRegisterButton(){
+    @objc private func tappedQuizRegisterButton(){
         guard let qsent = Qsentences.text else { return }
         guard let cA = Choice_A.text else { return }
         guard let cB = Choice_B.text else { return }

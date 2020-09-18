@@ -87,8 +87,6 @@ extension ChatRoomViewController: ChatInputAccessoryViewDelegate {
     
     func tappedSendButton(text: String) {
         addMessageToFireStore(text: text)
-
-        
     }
     
     private func addMessageToFireStore(text: String) {
@@ -96,6 +94,7 @@ extension ChatRoomViewController: ChatInputAccessoryViewDelegate {
         guard let name = user?.username else { return }
         guard let uid = Auth.auth().currentUser?.uid else { return }
         chatInputAccessoryView.removeText()
+        let messageId = randomString(length: 20)
         
         let docData = [
             "name": name,
@@ -104,15 +103,40 @@ extension ChatRoomViewController: ChatInputAccessoryViewDelegate {
             "message": text
             ] as [String : Any]
         
-        Firestore.firestore().collection("chatRooms").document(chatroomDocId).collection("messages").document().setData(docData) { (err) in
+        Firestore.firestore().collection("chatRooms").document(chatroomDocId).collection("messages").document(messageId).setData(docData) { (err) in
             if let err = err {
                 print("メッセージ情報の保存に失敗しました \(err)")
                 return
             }
+            
+            let latestMessageData = [
+                "latestMessageId": messageId
+            ]
+            
+            Firestore.firestore().collection("chatRooms").document(chatroomDocId).updateData(latestMessageData) { (err) in
+                if let err = err {
+                    print("最新メッセージの保存に失敗しました． \(err)")
+                    return
+                }
+                print("メッセージの保存に成功しました")
+            }
         }
-        
-        print("メッセージの保存に成功しました")
+
     }
+    
+    func randomString(length: Int) -> String {
+        let letters: NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        return randomString
+    }
+    
     
 }
 
