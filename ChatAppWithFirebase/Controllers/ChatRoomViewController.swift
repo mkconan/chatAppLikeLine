@@ -16,10 +16,16 @@ class ChatRoomViewController: UIViewController {
     
     private let cellId = "cellId"
     private var messages = [Message]()
+    private let accessoryHeigh: CGFloat = 100
+    private let tableViewContentInset: UIEdgeInsets = .init(top: 60, left: 0, bottom: 0, right: 0)
+    private let tableViewIndicatorInset: UIEdgeInsets = .init(top: 60, left: 0, bottom: 0, right: 0)
+    private var safeAreaButtom: CGFloat {
+        self.view.safeAreaInsets.bottom
+    }
     
     private lazy var chatInputAccessoryView: ChatInputAccessoryView = {
         let view = ChatInputAccessoryView()
-        view.frame = .init(x: 0, y: 0, width: view.frame.width, height: 100)
+        view.frame = .init(x: 0, y: 0, width: view.frame.width, height: accessoryHeigh)
         view.delegate = self
         return view
     }()
@@ -29,17 +35,51 @@ class ChatRoomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNotification()
+        setupChatRoomTableView()
+        fetchMessages()
+        
+    }
+    
+    private func setupNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    private func setupChatRoomTableView() {
         chatRoomTableView.delegate = self
         chatRoomTableView.dataSource = self
         chatRoomTableView.register(UINib(nibName: "ChatRoomTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
         chatRoomTableView.backgroundColor = .rgb(red: 118, green: 140, blue: 180)
-        chatRoomTableView.contentInset = .init(top: 60, left: 0, bottom: 00, right: 0)
-        chatRoomTableView.scrollIndicatorInsets = .init(top: 60, left: 0, bottom: 00, right: 0)
+        chatRoomTableView.contentInset = tableViewContentInset
+        chatRoomTableView.scrollIndicatorInsets = tableViewIndicatorInset
         chatRoomTableView.keyboardDismissMode = .interactive
         chatRoomTableView.transform = CGAffineTransform(a: 1, b: 0, c: 0, d: -1, tx: 0, ty: 0)
         
-        fetchMessages()
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        guard let userInfo = notification.userInfo else { return }
         
+        if let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as AnyObject).cgRectValue{
+            
+            if keyboardFrame.height <= accessoryHeigh { return }
+            
+            let top = keyboardFrame.height - safeAreaButtom
+            var moveY = -(top - chatRoomTableView.contentOffset.y)
+            if chatRoomTableView.contentOffset.y != -60 { moveY += 60}
+            let contentInset = UIEdgeInsets(top: top, left: 0, bottom: 0, right: 0)
+            
+            chatRoomTableView.contentInset = contentInset
+            chatRoomTableView.scrollIndicatorInsets = contentInset
+            chatRoomTableView.contentOffset = CGPoint(x: 0, y: moveY)
+            
+        }
+    }
+    
+    @objc func keyboardWillHide() {
+        chatRoomTableView.contentInset = tableViewContentInset
+        chatRoomTableView.scrollIndicatorInsets = tableViewIndicatorInset
     }
     
     override var inputAccessoryView: UIView? {
@@ -74,7 +114,7 @@ class ChatRoomViewController: UIViewController {
                     }
                     
                     self.chatRoomTableView.reloadData()
-//                    self.chatRoomTableView.scrollToRow(at: IndexPath(row: self.messages.count-1, section: 0), at: .bottom, animated: true)
+                    //                    self.chatRoomTableView.scrollToRow(at: IndexPath(row: self.messages.count-1, section: 0), at: .bottom, animated: true)
                     
                 case .modified, .removed:
                     print("nothing to do")
@@ -121,10 +161,9 @@ extension ChatRoomViewController: ChatInputAccessoryViewDelegate {
                     print("最新メッセージの保存に失敗しました． \(err)")
                     return
                 }
-                print("メッセージの保存に成功しました")
             }
         }
-
+        
     }
     
     func randomString(length: Int) -> String {
@@ -162,5 +201,5 @@ extension ChatRoomViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-
+    
 }

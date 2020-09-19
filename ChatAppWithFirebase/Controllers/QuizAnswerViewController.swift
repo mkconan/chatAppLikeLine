@@ -64,7 +64,7 @@ class QuizanswerViewCell: UIView{
                 choice_c.titleLabel?.text = qdata.cC
                 choice_d.titleLabel?.text = qdata.cD
                 qsentence.text = qdata.qsent
-
+                
             }
         }
     }
@@ -78,11 +78,11 @@ class QuizanswerViewCell: UIView{
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
     }
     /*
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    */
+     override func setSelected(_ selected: Bool, animated: Bool) {
+     super.setSelected(selected, animated: animated)
+     }
+     */
 }

@@ -49,7 +49,7 @@ class SignUpViewController: UIViewController {
                 HUD.hide()
                 return
             }
-
+            
             storageRef.downloadURL { (url, err) in
                 if let err = err {
                     print("データベースからのダウンロードに失敗しました \(err)")

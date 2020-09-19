@@ -67,7 +67,6 @@ class UserListViewController: UIViewController {
                 return
             }
             
-            print("user情報の取得に成功しました")
             snapshots?.documents.forEach({ (snapshot) in
                 let dic = snapshot.data()
                 let user = User.init(dic: dic)

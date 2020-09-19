@@ -43,7 +43,6 @@ class LoginViewController: UIViewController {
             }
             
             HUD.hide()
-            print("ログインに成功しました。")
             let nav = self.presentingViewController as! UINavigationController
             let chatListViewController = nav.viewControllers[nav.viewControllers.count-1] as? ChatListViewController
             chatListViewController?.fetchChatroomsInfoFromFirestore()

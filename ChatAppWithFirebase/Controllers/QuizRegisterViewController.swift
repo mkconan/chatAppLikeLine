@@ -35,7 +35,7 @@ class  QuizRegisterViewController: UIViewController{
         Choice_D.delegate = self
         Choice_ans.delegate = self
         Commentary.delegate = self
-
+        
         RegisterButton.isEnabled = false
         RegisterButton.backgroundColor = .rgb(red: 100, green: 100, blue: 100)
     }
@@ -71,8 +71,8 @@ class  QuizRegisterViewController: UIViewController{
             self.dismiss(animated: true, completion: nil)
             
         }
-            
-    
+        
+        
     }
     
 }

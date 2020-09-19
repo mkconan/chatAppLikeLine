@@ -162,12 +162,12 @@ class ChatListViewController: UIViewController {
         } catch {
             print("ログアウトに失敗しました \(error)")
         }
-
+        
         
     }
     
     @objc private func tappedNavRightBarButton() {
-
+        
         let storyboard = UIStoryboard(name: "SignUp", bundle: nil)
         let signUpViewController = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
         let nav = UINavigationController(rootViewController: signUpViewController)
@@ -234,7 +234,7 @@ extension ChatListViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 class ChatListTableViewCell: UITableViewCell{
-
+    
     
     var chatroom: ChatRoom? {
         didSet {
@@ -257,9 +257,9 @@ class ChatListTableViewCell: UITableViewCell{
     @IBOutlet weak var partnerLabel: UILabel!
     @IBOutlet weak var latestMessageLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
- 
     
-        
+    
+    
     
     
     override func awakeFromNib() {
