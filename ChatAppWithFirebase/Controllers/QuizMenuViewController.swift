@@ -12,7 +12,7 @@ class QuizMenuViewController:UIViewController {
     
     @IBAction func tappedAnswerButton(_ sender: Any) {
         let storyboard = UIStoryboard.init(name: "QuizAnswer", bundle: nil)
-        let quizAnswerViewController = storyboard.instantiateViewController(identifier: "QuizAnswerController")
+        let quizAnswerViewController = storyboard.instantiateViewController(identifier: "QuizAnswerViewController")
         //self.present(quizAnswerViewController, animated: true, completion: nil)
         navigationController?.pushViewController(quizAnswerViewController, animated: true)
     }
